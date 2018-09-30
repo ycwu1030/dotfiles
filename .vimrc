@@ -1,0 +1,10 @@
+syntax on
+set nu
+set nocompatible
+set expandtab
+set tabstop=4
+set shiftwidth=4
+set smarttab
+set autoindent
+set smartindent
+color zellner
