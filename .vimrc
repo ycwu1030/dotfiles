@@ -10,13 +10,15 @@ set shiftwidth=4
 set smarttab
 set autoindent
 set smartindent
+set ignorecase smartcase
 noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
 nnoremap <esc><esc> :noh<return><esc>
-set background=dark
-color solarized
+syntax enable
+"set background=dark
+"colorscheme solarized
 
 call plug#begin('~/.vim/plugged')
 

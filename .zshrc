@@ -1,8 +1,8 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH="/home/ycwu/.oh-my-zsh"
+export ZSH="/Users/ycwu/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -65,6 +65,8 @@ ZSH_THEME="agnoster"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  zsh-autosuggestions
+  zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -83,8 +85,6 @@ source $ZSH/oh-my-zsh.sh
 #   export EDITOR='mvim'
 # fi
 
-export EDITOR="vim"
-
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -100,13 +100,27 @@ export EDITOR="vim"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-#source /home/ycwu/Workings/ROOT-Package/5.34.36/bin/thisroot.sh
-source /home/ycwu/Workings/ROOT-Package/6.08.06/bin/thisroot.sh
-source /home/ycwu/Workings/SUPPORTINGS/SUPPORTINGSENV.sh
-export PATH=$PATH:/home/ycwu/.local/bin
-export TERM=xterm-256color
+setopt nonomatch
 
-# added by Anaconda3 4.4.0 installer
-#export PATH="/home/ycwu/Workings/anaconda3/bin:$PATH"
-source /home/ycwu/Workings/MC-Tools/Whizard/2.6.3/bin/whizard-setup.sh 
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/ycwu/Workings/EWPM/BSMPT/lib/libcmaes/lib
+alias sshtyr="ssh -X tyr.physics.carleton.ca"
+alias sshthor="ssh -X thor.physics.carleton.ca"
+alias sshtheory="ssh -Y 134.117.23.67" 
+alias sshihep="ssh -Y wuyc@lxslc7.ihep.ac.cn"
+alias sshpete="ssh -Y pete.hpc.okstate.edu"
+alias packsubmit="tar -cvzf article.tar.gz *"
+alias sshfspete="/Users/ycwu/Workingspace/dotfiles/sshfs-remote.sh"
+#source /usr/local/bin/thisroot.sh
+source /Users/ycwu/Workingspace/Utilities/root-6.24.00/bin/thisroot.sh
+source /Users/ycwu/anaconda3/etc/profile.d/conda.sh
+# alias ExpAna="export PATH=/Users/ycwu/anaconda3/bin:$PATH"
+# alias ModifyTime="~/.config/vnote/resources/ModifiedTime.sh"
+alias ModifyTime="while true; do fswatch --one-event /Users/ycwu/Documents/vnote_notebooks | xargs -I '{}' ~/.config/vnote/resources/ModifiedTime.sh '{}';sleep 10; done"
+alias resetql="qlmanage -r"
+alias math="/Applications/Mathematica.app/Contents/MacOS/MathKernel"
+alias zim="open -a /Applications/zim.app"
+alias zimtest="GTK_DEBUG=interactive /usr/local/bin/zim"
+source /Users/ycwu/Workingspace/MC-Generator/WHIZARD/2.8.5/bin/whizard-setup.sh
+source /Users/ycwu/Workingspace/Utilities/LHAPDF/SET_LHAPDF.sh
+# "/usr/local/bin/python3 /Users/ycwu/Downloads/Applications/zim-0.72.0/zim.py"
+
+source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
