@@ -76,7 +76,8 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -109,6 +110,7 @@ alias sshihep="ssh -Y wuyc@lxslc7.ihep.ac.cn"
 alias sshpete="ssh -Y pete.hpc.okstate.edu"
 alias packsubmit="tar -cvzf article.tar.gz *"
 alias sshfspete="/Users/ycwu/Workingspace/dotfiles/sshfs-remote.sh"
+alias sshor="ssh -i ~/.ssh/ssh-key-2021-07-17-Oracle.key opc@129.159.46.214"
 #source /usr/local/bin/thisroot.sh
 source /Users/ycwu/Workingspace/Utilities/root-6.24.00/bin/thisroot.sh
 source /Users/ycwu/anaconda3/etc/profile.d/conda.sh
