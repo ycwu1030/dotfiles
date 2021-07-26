@@ -140,5 +140,6 @@ let g:vimtex_view_method='skim'
 Plug 'vim-airline/vim-airline'  
 Plug 'vim-airline/vim-airline-themes'
 Plug 'preservim/nerdtree'
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
