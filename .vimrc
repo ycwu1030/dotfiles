@@ -125,6 +125,10 @@ nnoremap <esc><esc> :noh<return><esc>
 "set background=dark
 "colorscheme solarized
 
+" For NERDTree
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+
 
 "======================================
 "           Plugins
@@ -135,5 +139,6 @@ Plug 'lervag/vimtex'
 let g:vimtex_view_method='skim'
 Plug 'vim-airline/vim-airline'  
 Plug 'vim-airline/vim-airline-themes'
+Plug 'preservim/nerdtree'
 
 call plug#end()
