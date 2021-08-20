@@ -1,0 +1,24 @@
+
+
+# Focus Window
+hyper - w : yabai -m window --focus north
+hyper - d : yabai -m window --focus east
+hyper - a : yabai -m window --focus west
+hyper - s : yabai -m window --focus south
+
+
+# Swap managed window
+hyper - u : yabai -m window --swap west
+hyper - i : yabai -m window --swap south
+hyper - o : yabai -m window --swap north
+hyper - p : yabai -m window --swap east
+
+# Focus display
+hyper - 1 : yabai -m window --display 1 yabai -m display --focus 1
+hyper - 2 : yabai -m window --display 2 yabai -m dispaly --focus 2
+
+# Rotate the windows
+hyper - r : yabai -m space --rotate 90
+
+hyper - e : yabai -m query --spaces | jq -re ".[] | select(.visible == 1).index" | xargs -I{} yabai -m query --windows --space {} | jq -re "[.[] | select(.app != \"Hammerspoon\")]" | jq -sre "add | sort_by(.display, .frame.x, .frame.y, .id) | nth(index(map(select(.focused == 1))) - 1).id" | xargs -I{} yabai -m window --focus {}
+
