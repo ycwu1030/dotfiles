@@ -2,7 +2,7 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/ycwu/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -111,8 +111,8 @@ alias sshpete="ssh -Y pete.hpc.okstate.edu"
 alias packsubmit="tar -cvzf article.tar.gz *"
 alias sshfspete="/Users/ycwu/Workingspace/dotfiles/sshfs-remote.sh"
 alias sshor="ssh -i ~/.ssh/ssh-key-2021-07-17-Oracle.key opc@129.159.46.214"
-#source /usr/local/bin/thisroot.sh
-source /Users/ycwu/Workingspace/Utilities/root-6.24.00/bin/thisroot.sh
+source /usr/local/bin/thisroot.sh
+#source /Users/ycwu/Workingspace/Utilities/root-6.24.00/bin/thisroot.sh
 source /Users/ycwu/anaconda3/etc/profile.d/conda.sh
 # alias ExpAna="export PATH=/Users/ycwu/anaconda3/bin:$PATH"
 # alias ModifyTime="~/.config/vnote/resources/ModifiedTime.sh"
