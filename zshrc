@@ -109,7 +109,7 @@ alias sshtheory="ssh -Y 134.117.23.67"
 alias sshihep="ssh -Y wuyc@lxslc7.ihep.ac.cn"
 alias sshpete="ssh -Y pete.hpc.okstate.edu"
 alias packsubmit="tar -cvzf article.tar.gz *"
-alias sshfspete="/Users/ycwu/Workingspace/dotfiles/sshfs-remote.sh"
+alias sshfspete="/Users/ycwu/Workingspace/dotfiles/scripts/sshfs-remote.sh"
 alias sshor="ssh -i ~/.ssh/ssh-key-2021-07-17-Oracle.key opc@129.159.46.214"
 source /usr/local/bin/thisroot.sh
 #source /Users/ycwu/Workingspace/Utilities/root-6.24.00/bin/thisroot.sh
