@@ -2,20 +2,25 @@
 # YABAI CONFIG
 
 ## Name my space
-yabai -m space 3 --label REFS
-yabai -m space 5 --label MAIL
-yabai -m space 6 --label BROWSER
-yabai -m space 7 --label CODE
-yabai -m space 8 --label SCHEDULE
-yabai -m space 9 --label CHAT
-yabai -m space 10 --label NOTE
+yabai -m space 1 --label MISC
+yabai -m space 2 --label REFS
+yabai -m space 3 --label CHAT
+yabai -m space 4 --label MAIL
+yabai -m space 5 --label BROW
+yabai -m space 6 --label CODE
+yabai -m space 7 --label SCHE
+yabai -m space 8 --label READ
+yabai -m space 9 --label NOTE
 
 ## Layout
 # bsp or float (default: bsp)
 yabai -m config layout bsp
 
-# Override default layout for space 2 only
+# Override default layout for some space
 # yabai -m config --space 2 layout float
+yabai -m config --space MAIL layout stack # For the space used for email, using stack
+yabai -m config --space CHAT layout stack # For the space used for email, using stack
+
 
 # By default, new windows become the right or bottom split when tiled, which can be changed to left or top
 
@@ -27,11 +32,11 @@ yabai -m config layout bsp
 ## Padding and gaps
 
 # Setting paddings
-yabai -m config top_padding 2
-yabai -m config bottom_padding 2
-yabai -m config left_padding 2
-yabai -m config right_padding 2
-yabai -m config window_gap 4
+yabai -m config top_padding 8
+yabai -m config bottom_padding 8
+yabai -m config left_padding 8
+yabai -m config right_padding 8
+yabai -m config window_gap 8
 
 ## Override gaps for space 2 only
 # yabai -m config --space 2 window_gap 0
@@ -97,5 +102,7 @@ yabai -m rule --add app="^root" manage=off
 yabai -m rule --add app="^zoom" manage=off
 
 yabai -m signal --add event=window_destroyed action="bash /Users/ycwu/Workingspace/dotfiles/yabai-skhd/window-focus-on-destroy.sh"
+yabai -m signal --add event=window_created action="bash /Users/ycwu/Workingspace/dotfiles/yabai-skhd/window-focus-on-create.sh"
 
+yabai -m config external_bar all:0:28
 echo "YABAI CONFIGURATION LOADED..."
