@@ -6,11 +6,18 @@ yabai -m space 1 --label MISC
 yabai -m space 2 --label REFS
 yabai -m space 3 --label CHAT
 yabai -m space 4 --label MAIL
-yabai -m space 5 --label BROW
-yabai -m space 6 --label CODE
-yabai -m space 7 --label SCHE
-yabai -m space 8 --label READ
-yabai -m space 9 --label NOTE
+# yabai -m space 5 --label BROW
+# yabai -m space 6 --label CODE
+# yabai -m space 7 --label SCHE
+# yabai -m space 8 --label READ
+# yabai -m space 9 --label NOTE
+yabai -m space 5 --label SCHE
+yabai -m space 6 --label DEVL
+yabai -m space 7 --label READ
+yabai -m space 8 --label BROW
+yabai -m space 9 --label CODE
+yabai -m space 10 --label SKIM
+yabai -m space 11 --label NOTE
 
 ## Layout
 # bsp or float (default: bsp)
@@ -96,13 +103,18 @@ yabai -m rule --add app="^System Information$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Activity Monitor$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Path Finder$" manage=off
 yabai -m rule --add app="^Spotify$" manage=off
-yabai -m rule --add app="^iTerm2$" manage=off
+yabai -m rule --add app="^NeteaseMusic" manage=off
+yabai -m rule --add app="^DEVONthink" manage=off
+yabai -m rule --add app="^EuDic" manage=off
+yabai -m rule --add app="^iTerm2" manage=off
 yabai -m rule --add app="^Logi Options$" manage=off
 yabai -m rule --add app="^root" manage=off
 yabai -m rule --add app="^zoom" manage=off
+yabai -m rule --add app="^Zoom" manage=off
+yabai -m rule --add app="^Focus" manage=off
 
-yabai -m signal --add event=window_destroyed action="bash /Users/ycwu/Workingspace/dotfiles/yabai-skhd/window-focus-on-destroy.sh"
-yabai -m signal --add event=window_created action="bash /Users/ycwu/Workingspace/dotfiles/yabai-skhd/window-focus-on-create.sh"
+# yabai -m signal --add event=window_destroyed action="bash /Users/ycwu/Workingspace/dotfiles/yabai-skhd/window-focus-on-destroy.sh"
+# yabai -m signal --add event=window_created action="bash /Users/ycwu/Workingspace/dotfiles/yabai-skhd/window-focus-on-create.sh"
 
 yabai -m config external_bar all:0:28
 echo "YABAI CONFIGURATION LOADED..."
