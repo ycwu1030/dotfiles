@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:$HOME/local/bin:/usr/local/bin:$PATH:$HOME/Library/Python/3.8/bin
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -107,13 +107,14 @@ alias sshtyr="ssh -X tyr.physics.carleton.ca"
 alias sshthor="ssh -X thor.physics.carleton.ca"
 alias sshtheory="ssh -Y 134.117.23.67" 
 alias sshihep="ssh -Y wuyc@lxslc7.ihep.ac.cn"
-alias sshpete="ssh -Y pete.hpc.okstate.edu"
+alias sshpete="ssh -Y ycwu@pete.hpc.okstate.edu"
 alias packsubmit="tar -cvzf article.tar.gz *"
 alias sshfspete="/Users/ycwu/Workingspace/dotfiles/scripts/sshfs-remote.sh"
 alias sshor="ssh -i ~/.ssh/ssh-key-2021-07-17-Oracle.key opc@129.159.46.214"
-source /usr/local/bin/thisroot.sh
+#source /usr/local/bin/thisroot.sh
 #source /Users/ycwu/Workingspace/Utilities/root-6.24.00/bin/thisroot.sh
-source /Users/ycwu/anaconda3/etc/profile.d/conda.sh
+source $HOME/Workingspace/ROOT/6.24.06/bin/thisroot.sh
+source $HOME/opt/anaconda3/etc/profile.d/conda.sh
 # alias ExpAna="export PATH=/Users/ycwu/anaconda3/bin:$PATH"
 # alias ModifyTime="~/.config/vnote/resources/ModifiedTime.sh"
 alias ModifyTime="while true; do fswatch --one-event /Users/ycwu/Documents/vnote_notebooks | xargs -I '{}' ~/.config/vnote/resources/ModifiedTime.sh '{}';sleep 10; done"
@@ -121,8 +122,24 @@ alias resetql="qlmanage -r"
 alias math="/Applications/Mathematica.app/Contents/MacOS/MathKernel"
 alias zim="open -a /Applications/zim.app"
 alias zimtest="GTK_DEBUG=interactive /usr/local/bin/zim"
-source /Users/ycwu/Workingspace/MC-Generator/WHIZARD/2.8.5/bin/whizard-setup.sh
-source /Users/ycwu/Workingspace/Utilities/LHAPDF/SET_LHAPDF.sh
+#source /Users/ycwu/Workingspace/MC-Generator/WHIZARD/2.8.5/bin/whizard-setup.sh
+#source $HOME/Workingspace/Utilities/LHAPDF/SET_LHAPDF.sh
 # "/usr/local/bin/python3 /Users/ycwu/Downloads/Applications/zim-0.72.0/zim.py"
 
 source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+#__conda_setup="$('/Users/ywu/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+#if [ $? -eq 0 ]; then
+#    eval "$__conda_setup"
+#else
+#    if [ -f "/Users/ywu/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+#        . "/Users/ywu/opt/anaconda3/etc/profile.d/conda.sh"
+#    else
+#        export PATH="/Users/ywu/opt/anaconda3/bin:$PATH"
+#    fi
+#fi
+#unset __conda_setup
+# <<< conda initialize <<<
+
