@@ -5,7 +5,7 @@ curdir=$(pwd)
 # sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # For powerline
-pip install powerline-status --user
+pip3 install powerline-status --user
 
 # For PowerFonts
 mkdir tmp

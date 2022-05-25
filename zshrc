@@ -103,6 +103,7 @@ export LC_ALL=en_US.UTF-8
 
 setopt nonomatch
 
+alias checknet="vnstat -d"
 alias sshtyr="ssh -X tyr.physics.carleton.ca"
 alias sshthor="ssh -X thor.physics.carleton.ca"
 alias sshtheory="ssh -Y 134.117.23.67" 
@@ -111,10 +112,11 @@ alias sshpete="ssh -Y ycwu@pete.hpc.okstate.edu"
 alias packsubmit="tar -cvzf article.tar.gz *"
 alias sshfspete="/Users/ycwu/Workingspace/dotfiles/scripts/sshfs-remote.sh"
 alias sshor="ssh -i ~/.ssh/ssh-key-2021-07-17-Oracle.key opc@129.159.46.214"
+alias scpor="scp -i ~/.ssh/ssh-key-2021-07-17-Oracle.key"
 #source /usr/local/bin/thisroot.sh
-#source /Users/ycwu/Workingspace/Utilities/root-6.24.00/bin/thisroot.sh
-source $HOME/Workingspace/ROOT/6.24.06/bin/thisroot.sh
-source $HOME/opt/anaconda3/etc/profile.d/conda.sh
+#source $HOME/Workingspace/ROOT/6.24.06/bin/thisroot.sh
+source /opt/homebrew/bin/thisroot.sh
+source $HOME/opt/anaconda3/etc/profile.d/conda.sh  # commented out by conda initialize
 # alias ExpAna="export PATH=/Users/ycwu/anaconda3/bin:$PATH"
 # alias ModifyTime="~/.config/vnote/resources/ModifiedTime.sh"
 alias ModifyTime="while true; do fswatch --one-event /Users/ycwu/Documents/vnote_notebooks | xargs -I '{}' ~/.config/vnote/resources/ModifiedTime.sh '{}';sleep 10; done"
@@ -123,21 +125,25 @@ alias math="/Applications/Mathematica.app/Contents/MacOS/MathKernel"
 alias zim="open -a /Applications/zim.app"
 alias zimtest="GTK_DEBUG=interactive /usr/local/bin/zim"
 #source /Users/ycwu/Workingspace/MC-Generator/WHIZARD/2.8.5/bin/whizard-setup.sh
-#source $HOME/Workingspace/Utilities/LHAPDF/SET_LHAPDF.sh
+source $HOME/Workingspace/Utilities/LHAPDF/SET_LHAPDF.sh
 # "/usr/local/bin/python3 /Users/ycwu/Downloads/Applications/zim-0.72.0/zim.py"
+
+export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git"
+export HOMEBREW_CORE_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git"
+export HOMEBREW_BOTTLE_DOMAIN="https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles"
 
 source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-#__conda_setup="$('/Users/ywu/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+#__conda_setup="$('/Users/ycwu/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 #if [ $? -eq 0 ]; then
 #    eval "$__conda_setup"
 #else
-#    if [ -f "/Users/ywu/opt/anaconda3/etc/profile.d/conda.sh" ]; then
-#        . "/Users/ywu/opt/anaconda3/etc/profile.d/conda.sh"
+#    if [ -f "/Users/ycwu/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+#        . "/Users/ycwu/opt/anaconda3/etc/profile.d/conda.sh"
 #    else
-#        export PATH="/Users/ywu/opt/anaconda3/bin:$PATH"
+#        export PATH="/Users/ycwu/opt/anaconda3/bin:$PATH"
 #    fi
 #fi
 #unset __conda_setup
