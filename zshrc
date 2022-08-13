@@ -113,6 +113,8 @@ alias packsubmit="tar -cvzf article.tar.gz *"
 alias sshfspete="/Users/ycwu/Workingspace/dotfiles/scripts/sshfs-remote.sh"
 alias sshor="ssh -i ~/.ssh/ssh-key-2021-07-17-Oracle.key opc@129.159.46.214"
 alias scpor="scp -i ~/.ssh/ssh-key-2021-07-17-Oracle.key"
+alias sshorkr1="ssh ubuntu@129.154.217.52"
+alias sshorkr2="ssh ubuntu@129.154.205.192"
 #source /usr/local/bin/thisroot.sh
 #source $HOME/Workingspace/ROOT/6.24.06/bin/thisroot.sh
 source /opt/homebrew/bin/thisroot.sh
@@ -126,6 +128,7 @@ alias zim="open -a /Applications/zim.app"
 alias zimtest="GTK_DEBUG=interactive /usr/local/bin/zim"
 #source /Users/ycwu/Workingspace/MC-Generator/WHIZARD/2.8.5/bin/whizard-setup.sh
 source $HOME/Workingspace/Utilities/LHAPDF/SET_LHAPDF.sh
+alias launchdropboxalter="HOME=$HOME/.dropbox-alt /Applications/Dropbox.app/Contents/MacOS/Dropbox > $HOME/dropbox-alter.log&"
 # "/usr/local/bin/python3 /Users/ycwu/Downloads/Applications/zim-0.72.0/zim.py"
 
 export HOMEBREW_BREW_GIT_REMOTE="https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git"
